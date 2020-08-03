@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DBPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uBc-Qe-V6n">
+                                <rect key="frame" x="20" y="84" width="374" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOp-Dz-fEy">
+                                        <rect key="frame" x="0.0" y="0.0" width="177" height="34"/>
+                                        <color key="backgroundColor" red="0.60260027650000003" green="0.60268950460000004" blue="0.60258072610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="조회">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="USu-3c-dkn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ure-CW-fsM">
+                                        <rect key="frame" x="197" y="0.0" width="177" height="34"/>
+                                        <color key="backgroundColor" red="0.60260027650000003" green="0.60268950460000004" blue="0.60258072610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="입력">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="insertData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rcK-xF-vlo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="제목" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4gZ-Bz-uQf">
+                                <rect key="frame" x="20" y="158" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="내용" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="63N-Ng-FDf">
+                                <rect key="frame" x="20" y="232" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chv-Qx-a99">
+                                <rect key="frame" x="20" y="727" width="374" height="35"/>
+                                <color key="backgroundColor" red="0.1348773241" green="0.18679612870000001" blue="0.40234243870000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="저장하기">
+                                    <color key="titleColor" red="0.9488371015" green="0.95264714959999997" blue="0.9630560279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aO3-ak-aL4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="chv-Qx-a99" secondAttribute="bottom" constant="100" id="0LG-x3-gxe"/>
+                            <constraint firstItem="63N-Ng-FDf" firstAttribute="top" secondItem="4gZ-Bz-uQf" secondAttribute="bottom" constant="40" id="IUr-hL-qBi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uBc-Qe-V6n" secondAttribute="trailing" constant="20" id="Kel-Jc-OoT"/>
+                            <constraint firstItem="4gZ-Bz-uQf" firstAttribute="top" secondItem="uBc-Qe-V6n" secondAttribute="bottom" constant="40" id="RRg-6p-cIW"/>
+                            <constraint firstItem="63N-Ng-FDf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XKg-HB-VRH"/>
+                            <constraint firstItem="uBc-Qe-V6n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="YLM-q7-Fcc"/>
+                            <constraint firstItem="4gZ-Bz-uQf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dpj-y1-cis"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="chv-Qx-a99" secondAttribute="trailing" constant="20" id="fRE-xb-BZC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4gZ-Bz-uQf" secondAttribute="trailing" constant="20" id="g1V-Ye-rdS"/>
+                            <constraint firstItem="chv-Qx-a99" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="j4C-59-hb8"/>
+                            <constraint firstItem="uBc-Qe-V6n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wxa-62-zlY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="63N-Ng-FDf" secondAttribute="trailing" constant="20" id="z4y-iM-RWt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="saveButton" destination="chv-Qx-a99" id="56Y-Ef-YbU"/>
+                        <outlet property="textFieldContents" destination="63N-Ng-FDf" id="OTo-b5-BeU"/>
+                        <outlet property="textFieldTitle" destination="4gZ-Bz-uQf" id="aUv-wP-c1Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+</document>
